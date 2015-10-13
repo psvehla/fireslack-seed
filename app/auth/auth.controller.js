@@ -11,7 +11,7 @@ angular.module('angularfireSlackApp').controller('AuthCtrl', function(Auth, $sta
 		alert(authCtrl.user.email);
 		alert(authCtrl.user.password);
 		Auth.$authWithPassword(authCtrl.user).then(function(auth) {
-			$state.go('home');
+			$state.go('channels');
 		}, function(error) {
 			alert(error.code);
 			authCtrl.error = error;
